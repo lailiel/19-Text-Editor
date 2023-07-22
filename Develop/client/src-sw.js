@@ -28,4 +28,9 @@ registerRoute(
   ({ request }) => request.mode === 'navigate', pageCache);
 
 // TODO: Implement asset caching
-registerRoute();
+// registerRoute();
+offlineFallback({
+  urls: ['/index.html', '/'],
+  strategy: pageCache,
+})
+
