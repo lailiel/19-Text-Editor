@@ -6,10 +6,10 @@
   A PWA text editor utilizing service workers and IndexedDB API.  Application allows the user to type coding notes with JavaScript syntax highlighting.
 
   ![Screenshot](./assets/App-Main.jpg)
-  ![Screenshot](./Assets/pop-out.jpg)
-  ![Screenshot](./Assets/manifest.jpg)
-  ![Screenshot](./Assets/service-worker.jpg)
-  ![Screenshot](./Assets/IndexedDB.jpg)
+  ![Screenshot](./assets/pop-out.jpg)
+  ![Screenshot](./assets/manifest.jpg)
+  ![Screenshot](./assets/service-worker.jpg)
+  ![Screenshot](./assets/IndexedDB.jpg)
 
   
 ## Table of Contents
