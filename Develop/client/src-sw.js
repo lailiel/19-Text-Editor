@@ -27,8 +27,26 @@ warmStrategyCache({
 registerRoute(({ request }) => request.mode === "navigate", pageCache);
 
 // TODO: Implement asset caching
-// registerRoute();
-offlineFallback({
-  urls: ["/index.html", "/"],
-  strategy: pageCache,
-});
+registerRoute(
+  ({ request }) => {
+    console.log(request);
+    return (
+      // CSS
+      request.destination === 'style' ||
+      // JavaScript
+      request.destination === 'script'
+    );
+  },
+  new CacheFirst({
+    cacheName: 'static-resources',
+    plugins: [
+      new CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
+    ],
+  })
+);
+// offlineFallback({
+//   urls: ["/index.html", "/"],
+//   strategy: pageCache,
+// });
